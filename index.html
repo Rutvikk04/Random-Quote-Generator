@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <span id="text">Quote Of The Day:</span>
+    <div id="quote"></div>
+    <button id="button" onclick="QuoteGenerator()">Generate Quote</button>
+    <script>
+        async function QuoteGenerator() {
+            let response = await fetch("https://type.fit/api/quotes")
+            if (response.ok) {
+                json = await response.json()
+                // console.log(data)
+            }
+            else {
+                alert("There is An Error" + response.status)
+            }
+            let RandomQuote = (json[Math.floor(Math.random() * json.length)].text)
+            console.log(RandomQuote)
+            document.getElementById("quote").innerHTML = RandomQuote
+
+        }
+    </script>
+</body>
+
+</html>

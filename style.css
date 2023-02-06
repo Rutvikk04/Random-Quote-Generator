@@ -1,0 +1,28 @@
+#text{
+    font-weight:bold;
+    font-size:30px;
+    color:cornflowerblue;
+}
+#quote{
+    border:2px solid black;
+    color:rgb(16, 16, 107);
+    background-color: bisque;
+    font-weight: bold;
+    margin:4px;
+    padding:4px;
+    border-radius:4px;
+}
+#button{
+    background-color:aqua;
+    color:black;
+    border:1px solid darkblue;
+    margin:4px;
+    padding:4px;
+    border-radius:4px;
+    transition:0.5s ease-in-out;
+}
+#button:hover{
+    cursor:pointer;
+    background-color:rgb(98, 98, 199);
+    color:whiteSmoke;
+}
